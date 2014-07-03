@@ -33,10 +33,12 @@
   <div id="page" class="hfeed">
 
     <header role="banner">
-
       <h1 class="title page-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php echo bloginfo('name'); ?></a></h1>
-
+      
       <a class="screen-reader-text skip-link" href="#content"><?php _e( 'Skip to content', 'classy' ); ?></a>
+      <nav class="main-navigation" role="navigation">
+        <?php main_menu(); ?>
+      </nav><!-- #site-navigation -->
 
     </header><!-- .site-header -->
   <div id="main" class="site-main" role="main">

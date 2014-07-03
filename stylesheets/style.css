@@ -618,10 +618,6 @@ body {
   background-attachment: fixed;
 }
 
-header {
-  width: 100%;
-}
-
 #page {
   *zoom: 1;
   padding-left: 20px;
@@ -642,7 +638,7 @@ header {
 }
 
 .title {
-  background-color: white;
+  background: rgba(255, 255, 255, 0.6);
   padding: 0 5px;
   float: left;
   border-bottom: 4px solid #000;
@@ -664,9 +660,6 @@ h1.page-title a {
   margin-top: 0;
 }
 
-nav {
-  clear: left;
-}
 @media (min-width: 460px) {
   nav {
     width: 30.43478%;
@@ -683,13 +676,15 @@ nav {
 }
 @media (min-width: 940px) {
   nav {
-    width: 14.89362%;
+    width: 100%;
     float: left;
     margin-right: 2.12766%;
   }
 }
 nav li {
+  display: inline-block;
   margin-bottom: 5px;
+  margin-right: 20px;
 }
 nav li a {
   font-size: 24px;
@@ -769,23 +764,10 @@ footer a:visited {
 }
 @media (min-width: 940px) {
   .copyright {
-    width: 74.46809%;
+    width: 65.95745%;
     float: left;
     margin-right: 2.12766%;
   }
-}
-
-.contactinfo {
-  display: none;
-}
-.contactinfo a {
-  font-family: "Oswald", sans-serif;
-}
-.contactinfo a:before {
-  font-family: 'icomoon';
-  text-decoration: none;
-  text-transform: uppercase;
-  margin-right: 5px;
 }
 
 @media (min-width: 460px) {
