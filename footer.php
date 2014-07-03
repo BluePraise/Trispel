@@ -12,6 +12,7 @@
     <footer id="colophon" class="site-footer" role="contentinfo">
          <div class="footer-info copyright">
           <span>Copyright <a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="Email"><?php echo bloginfo();?> </a> <?php echo date('Y'); ?>.</span>
+          <span>Deze site is gebouwd door <a href="http://mayconnect.org" alt="Magalie Linda Website">Magalie Linda</a>.</span>
         </div> <!--end footerinfo -->
         <div class="footer-info social">
           <span class="icon-facebook facebook"><a href="http://twitter.com"></a></span>

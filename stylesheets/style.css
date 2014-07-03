@@ -762,6 +762,10 @@ footer a:visited {
   width: 100%;
   float: left;
 }
+.copyright span {
+  display: block;
+  margin-top: 5px;
+}
 @media (min-width: 940px) {
   .copyright {
     width: 65.95745%;

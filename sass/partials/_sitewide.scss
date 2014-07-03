@@ -134,6 +134,10 @@ footer {
 .copyright {
   width: 100%;
   float: left;
+  span {
+    display: block;
+    margin-top: 5px;
+  }
   @include at-breakpoint($desktop) {
     @include span-columns(8,12);
   }
