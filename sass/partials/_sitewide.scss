@@ -1,0 +1,200 @@
+body {
+  @include background-size(cover);
+  background-image: image-url('bg.jpg');
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='bg.jpg', sizingMethod='scale');
+  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='bg.jpg', sizingMethod='scale')";
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+header {
+  width: 100%;
+}
+
+#page {
+  @include container();
+  @if ($show-grid-backgrounds) {
+    @include susy-grid-background;
+  }
+  @include at-breakpoint($wide-mobile) {
+    @if ($show-grid-backgrounds) {
+      @include susy-grid-background;
+    }
+  }
+  @include at-breakpoint($tablet) {
+    @if ($show-grid-backgrounds) {
+      @include susy-grid-background;
+    }
+  }
+  @include at-breakpoint($desktop) {
+    max-width: 1080px;
+    margin-top: -20px;
+    @if ($show-grid-backgrounds) {
+      @include susy-grid-background;
+    }
+  }
+}
+
+.title {
+  background-color: $white;
+  padding: 0 5px;
+  float: left;
+  border-bottom: 4px solid #000;
+}
+
+h1.page-title {
+  a {
+    color: $black;
+    @include font-size(48,48);
+    text-decoration: none;
+    @extend .no-hover-effect;
+  }
+}
+
+h2.page-title {
+  .page & {
+    border-bottom: 4px solid white;
+    text-align: right;
+    color: $black;
+    margin-top: 0;
+  }
+}
+
+nav {
+  clear: left;
+  @include at-breakpoint($wide-mobile) {
+    @include span-columns(2,6);
+  }
+  @include at-breakpoint($tablet) {
+    @include span-columns(2,10);
+  }
+  @include at-breakpoint($desktop) {
+    @include span-columns(2,12);
+  }
+  li {
+    margin-bottom: 5px;
+    a {
+      @include font-size(24,24);
+      text-transform: uppercase;
+      font-family: $oswald;
+      color: $white;
+    }
+    .sub-menu {
+      margin-left: 20px;
+      margin-top: 5px;
+    }
+  }
+}
+
+#main {
+  @include at-breakpoint($wide-mobile) {
+    @include span-columns(4 omega, 6);
+  }
+  @include at-breakpoint($tablet) {
+    @include span-columns(8 omega, 10);
+  }
+  @include at-breakpoint($desktop) {
+    @include span-columns(9 omega, 12);
+  }
+}
+
+.content {
+  padding: 1em;
+  background-color: rgba(255, 255, 255, 0.5);
+  font-family: 'Lora', serif;
+  border: 4px solid $white;
+  color: $black;
+}
+
+footer {
+  clear: both;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  margin-top: 50px;
+  padding-top: 30px;
+  border-top: 4px solid $black;
+  span, a, p {
+    color: $white;
+    @include font-size(24,24);
+    text-transform: uppercase;
+    font-family: $oswald;
+  }
+  a:visited {
+    color: $white;
+  }
+  a:hover {
+    @extend .no-hover-effect;
+  }
+}
+.footer-info {
+  margin-left: 10px;
+  margin-bottom: 30px;
+  // @include span-columns(12,12)
+}
+
+.copyright {
+  width: 100%;
+  float: left;
+  @include at-breakpoint($desktop) {
+    @include span-columns(9,12);
+  }
+}
+.contactinfo {
+  display: none;
+  @include at-breakpoint($wide-mobile) {
+    // @include span-columns(3,6);
+  }
+  @include at-breakpoint($desktop) {
+    // @include span-columns(6,12);
+  }
+  a {
+    font-family: $oswald;
+    &:before {
+      font-family: 'icomoon';
+      text-decoration: none;
+      text-transform: uppercase;
+      margin-right: 5px;
+    }
+  }
+}
+.social {
+  @include at-breakpoint($wide-mobile) {
+    @include span-columns(3 omega, 6);
+  }
+  @include at-breakpoint($desktop) {
+    @include span-columns(3 omega,12);
+  }
+  span:before {
+    text-decoration: none;
+    margin-right: 5px;
+    @include font-size(48, 48);
+  }
+  .facebook {
+    color: $color-facebook;
+  }
+  .google {
+    color: $color-google;
+  }
+  .twitter {
+    color: $color-twitter;
+  }
+}
+.edit-link {
+  display: inline-block;
+  .post-edit-link {
+    &:visited {
+    color: black;
+    }
+    @extend .no-hover-effect;
+  }
+  &:before {
+    font-family: 'icomoon';
+    display: inline-block;
+    content: "\e601";
+    margin-right: 10px;
+    color: black;
+  }
+}
